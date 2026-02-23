@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Trish Starkey: Strategy, influence, and execution for leaders navigating scale and change. Consulting and executive coaching. Columbia University–certified executive coach (3CP)." />
+  <title>Trish Starkey | Consulting + Executive Coaching</title>
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.55);
+      --line: rgba(255,255,255,0.14);
+      --accent: #2d7dff;   /* blue */
+      --accent2: #6ea8ff;
+      --shadow: 0 18px 40px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(45,125,255,0.28), transparent 60%),
+        radial-gradient(1000px 500px at 90% 10%, rgba(110,168,255,0.18), transparent 55%),
+        radial-gradient(900px 600px at 30% 110%, rgba(45,125,255,0.16), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a{color: var(--accent2); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .wrap{max-width: var(--max); margin: 0 auto; padding: 28px 18px 70px}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 14px; padding: 10px 0 18px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .brand .name{font-weight: 700; letter-spacing: 0.2px}
+    .brand .tag{color: var(--muted2); font-size: 13px}
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{font-size: 14px; color: var(--muted)}
+    nav a:hover{color: var(--text)}
+    .hero{
+      margin-top: 16px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(800px 300px at 20% 0%, rgba(45,125,255,0.20), transparent 60%);
+      pointer-events:none;
+    }
+    .hero-inner{
+      position:relative;
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+      align-items:start;
+    }
+    @media (max-width: 860px){
+      .hero-inner{grid-template-columns: 1fr}
+    }
+    h1{
+      margin:0 0 8px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -0.4px;
+    }
+    .subtitle{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .lead{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+    .cred{
+      margin: 14px 0 18px;
+      color: var(--muted2);
+      font-size: 14px;
+    }
+    .cred strong{color: var(--text); font-weight: 650}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-weight: 650;
+      font-size: 14px;
+      letter-spacing: 0.1px;
+      cursor:pointer;
+      text-decoration:none;
+    }
+    .btn:hover{background: rgba(255,255,255,0.10); text-decoration:none}
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(45,125,255,1), rgba(45,125,255,0.85));
+      border: 1px solid rgba(45,125,255,0.65);
+      box-shadow: 0 10px 26px rgba(45,125,255,0.18);
+    }
+    .btn.primary:hover{filter: brightness(1.03)}
+    .note{
+      margin-top: 14px;
+      color: var(--muted2);
+      font-size: 13px;
+    }
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.04);
+      padding: 18px;
+    }
+    .hero-right .card{position:relative}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(45,125,255,0.40);
+      background: rgba(45,125,255,0.12);
+      color: rgba(255,255,255,0.88);
+      font-weight: 650;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
+    .list{
+      margin: 12px 0 0;
+      padding: 0 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .list li{margin: 8px 0}
+    section{margin-top: 22px}
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 860px){
+      .grid2{grid-template-columns: 1fr}
+    }
+    h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -0.2px;
+    }
+    h3{
+      margin: 0 0 6px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.92);
+    }
+    p{margin: 0 0 10px}
+    .muted{color: var(--muted)}
+    .muted2{color: var(--muted2)}
+    .service h3{display:flex; gap:10px; align-items:baseline}
+    .service .kicker{
+      color: var(--accent2);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.22px;
+      text-transform: uppercase;
+    }
+    .service ul{margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 14px}
+    .service li{margin: 7px 0}
+    .steps{
+      counter-reset: step;
+      display:grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .step{
+      display:flex; gap: 10px; align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+    }
+    .step:before{
+      counter-increment: step;
+      content: counter(step);
+      flex: 0 0 auto;
+      width: 26px; height: 26px;
+      border-radius: 9px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(45,125,255,0.18);
+      border: 1px solid rgba(45,125,255,0.35);
+      color: rgba(255,255,255,0.9);
+      font-weight: 750;
+      font-size: 13px;
+      margin-top: 1px;
+    }
+    blockquote{
+      margin: 0;
+      padding: 14px 14px;
+      border-left: 3px solid rgba(110,168,255,0.6);
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      color: rgba(255,255,255,0.84);
+      font-size: 14px;
+    }
+    .quotes{
+      display:grid;
+      gap: 12px;
+    }
+    footer{
+      margin-top: 30px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted2);
+      font-size: 13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .smallcaps{
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.6px;
+      color: var(--muted2);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="name">Trish Starkey</div>
+        <div class="tag">Consulting + Executive Coaching</div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#who">Who this is for</a>
+        <a href="#services">Services</a>
+        <a href="#approach">How I work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <div>
+            <h1>Strategy, influence, and execution for leaders navigating scale and change.</h1>
+            <p class="subtitle"><em>Clarity, influence, and execution for rising leaders.</em></p>
+
+            <p class="lead">
+              I advise and coach leaders operating in complex, high-growth environments who are expanding scope, leading through change,
+              and translating strategy into results.
+            </p>
+
+            <p class="cred">
+              Chief of Staff and Chief People Officer at an energy infrastructure venture. Commercial strategist with deep experience in marketing,
+              stakeholder communications, and operating cadence.<br />
+              <strong>Columbia University–certified executive coach (3CP).</strong>
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:trish@trishstarkey.com?subject=Consulting%20or%20Coaching%20Inquiry">Email me</a>
+              <a class="btn" href="https://www.linkedin.com/in/trishstarkey/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+
+            <div class="note">
+              I work with a small number of clients at a time to ensure focus, depth, and meaningful progress.
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="card">
+              <div class="pill">Best fit for leaders who are leveling up</div>
+              <ul class="list">
+                <li>Moving from functional excellence to enterprise impact</li>
+                <li>Taking on broader scope, visibility, or organizational complexity</li>
+                <li>Operating in technical, engineering-led businesses where influence matters</li>
+              </ul>
+              <!-- Optional: Add a headshot by placing an image file next to index.html and updating src below.
+              <img src="headshot.jpg" alt="Headshot of Trish Starkey" style="width:100%; border-radius:14px; margin-top:14px; border:1px solid var(--line);" />
+              -->
+              <p class="muted2" style="margin-top:12px; font-size:13px;">
+                Email-first. I will reply with next steps and a simple intake.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="who" class="grid2">
+        <div class="card">
+          <h2>Who this is for</h2>
+          <p class="muted">
+            I work best with leaders who are:
+          </p>
+          <ul class="list">
+            <li>Moving from <strong>functional excellence</strong> to <strong>enterprise impact</strong></li>
+            <li>Stepping into <strong>broader scope</strong>, visibility, or ambiguity</li>
+            <li>Leading through growth, transition, or change</li>
+            <li>Balancing technical depth with executive-level influence</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Common inflection points</h2>
+          <ul class="list">
+            <li>"I’m performing well, but the expectations have changed."</li>
+            <li>"I need to be more strategic and sharper in how I communicate."</li>
+            <li>"My work has scaled faster than my operating model."</li>
+            <li>"I need a clearer story about my impact and readiness."</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="services" class="card">
+        <h2>Services</h2>
+
+        <div class="grid2" style="margin-top:12px;">
+          <div class="service">
+            <h3><span class="kicker">Consulting</span> Strategy, commercial clarity, and change execution</h3>
+            <p class="muted">
+              For leaders and small teams navigating growth, transition, or increased complexity.
+            </p>
+            <ul>
+              <li>Strategic positioning and narrative (internal and external)</li>
+              <li>Executive communications and stakeholder alignment</li>
+              <li>Change leadership during scale, restructuring, or role expansion</li>
+              <li>Commercial and go-to-market clarity in long-cycle B2B environments</li>
+              <li>Operating cadence: priorities, governance, decision rights, meeting rhythm</li>
+            </ul>
+            <p class="muted2" style="margin-top:10px;">
+              Outcome: clear direction, credible messaging, and an execution rhythm that holds under real-world pressure.
+            </p>
+          </div>
+
+          <div class="service">
+            <h3><span class="kicker">Executive Coaching</span> Leadership through scale and change (1:1)</h3>
+            <p class="muted">
+              For leaders whose roles are expanding and who need to operate differently, not just do more.
+            </p>
+            <ul>
+              <li>Strategic thinking and judgment</li>
+              <li>Executive presence and influence</li>
+              <li>Leading through ambiguity and change</li>
+              <li>Managing energy, priorities, and boundaries at higher altitude</li>
+            </ul>
+            <p class="muted2" style="margin-top:10px;">
+              Structured, direct, and supportive, with an emphasis on accountability and practical application.
+            </p>
+          </div>
+        </div>
+
+        <div class="service" style="margin-top:16px;">
+          <h3><span class="kicker">Career Strategy Coaching</span> Positioning and confident conversations</h3>
+          <p class="muted">
+            For professionals preparing for expanded responsibility or a next-level role.
+          </p>
+          <ul>
+            <li>Clarifying ambition and defining the next right scope</li>
+            <li>Articulating value in a way senior leaders recognize</li>
+            <li>Confident career and performance conversations</li>
+            <li>Translating strengths into enterprise-level impact</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="approach" class="card">
+        <h2>How I work</h2>
+        <p class="muted">A practical, repeatable process:</p>
+
+        <div class="steps" role="list">
+          <div class="step" role="listitem"><div><strong>Clarify</strong> the context, goals, and constraints</div></div>
+          <div class="step" role="listitem"><div><strong>Define</strong> the strategy, narrative, and priorities</div></div>
+          <div class="step" role="listitem"><div><strong>Build</strong> tools and systems that support execution</div></div>
+          <div class="step" role="listitem"><div><strong>Act</strong> with focus and accountability</div></div>
+          <div class="step" role="listitem"><div><strong>Sustain</strong> progress through habits and operating rhythm</div></div>
+        </div>
+
+        <p class="muted2" style="margin-top:12px;">
+          This work is grounded in real operating environments, not theory.
+        </p>
+      </section>
+
+      <section id="about" class="card">
+        <h2>About</h2>
+        <p class="muted">
+          I’m Trish Starkey. I work at the intersection of <strong>strategy</strong>, <strong>commercial execution</strong>, and <strong>people systems</strong>,
+          helping leaders navigate growth and change without losing clarity or momentum.
+        </p>
+        <p class="muted">
+          In my current role as Chief of Staff and Chief People Officer at an energy infrastructure venture, I partner closely with executives on strategy execution,
+          stakeholder communications, and operating cadence. My background spans commercial strategy, marketing and positioning, and leadership enablement in complex,
+          long-cycle B2B environments.
+        </p>
+        <p class="muted">
+          I’m a <strong>Columbia University–certified executive coach (3CP)</strong>. My approach blends rigor and empathy. Clients describe me as clear, grounded, and practical.
+          We focus on sharpening thinking, tightening the story leaders tell about their work, and building execution systems that scale with responsibility.
+        </p>
+        <p class="muted2">
+          I’m selective about new engagements to ensure each client receives focused, high-quality support.
+        </p>
+      </section>
+
+      <section id="feedback" class="card">
+        <h2>Selected client feedback</h2>
+        <div class="quotes">
+          <blockquote>
+            “Trish helped me clarify my ambition and articulate the value I bring, while also being honest about what I wanted next. The guidance was practical and immediately applicable.”
+          </blockquote>
+          <blockquote>
+            “Working with Trish helped me let go of the belief that I needed to be more technical to advance. I gained clarity, direction, and confidence anchored in clear decision pillars.”
+          </blockquote>
+          <blockquote>
+            “Trish brings structure, insight, and accountability. She challenges your thinking while creating a supportive environment to grow.”
+          </blockquote>
+          <blockquote>
+            “An exceptional listener with strong judgment. Trish provides thoughtful, actionable advice that helps you operate at a higher level.”
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p class="muted">
+          I’m thoughtful about taking on new clients. If you’re navigating increased scope, organizational change, or a leadership transition,
+          email me with a short note on what you’re facing and what success would look like.
+        </p>
+        <div class="cta-row" style="margin-top:12px;">
+          <a class="btn primary" href="mailto:trish@trishstarkey.com?subject=Consulting%20or%20Coaching%20Inquiry">Email trish@trishstarkey.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/trishstarkey/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+        <p class="muted2" style="margin-top:10px; font-size:13px;">
+          Tip: include what you want to be true in 90 days, and what’s getting in the way.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <span class="smallcaps">TrishStarkey.com</span>
+        <span class="muted2"> | </span>
+        <a href="#top">Back to top</a>
+      </div>
+      <div class="muted2">© <span id="y"></span> Trish Starkey</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
